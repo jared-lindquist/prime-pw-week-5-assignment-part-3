@@ -3,12 +3,22 @@ let collection = [];
 
 
 function addToCollection(title, artist, yearPublished){
-  this.title = title;
-  this.artist = artist;
-  this.yearPublished = yearPublished;
-    collection.push(addToCollection);
-    return collection;
+ return collection.push({title, artist, yearPublished})
 }
-addToCollection('Go Farther In Lightness', 'Gang of Youths', '2007');
-  console.log(collection);
 
+let album= {
+  title: this.title,
+  artist: this.artist,
+  yearPublished: this.yearPublished,
+  addToCollection: function(){
+    return collection.push(this.title + this.artist + this.yearPublished)
+  }
+};
+
+addToCollection("In Rainbows", "Radiohead", "2007");
+addToCollection("Go Farther In Lightness", "Gang of Youths", "2017");
+addToCollection("Hot Fuss", "The Killers", "2004");
+addToCollection("Brave Faces Everyone", "Spanish Love Songs", "2020");
+addToCollection("RTJ4", "Run The Jewels", "2020");
+addToCollection("I Don\'t Live Here Anymore", "The War On Drugs", "2021");
+console.log(collection);
