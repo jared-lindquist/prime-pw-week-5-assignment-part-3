@@ -22,3 +22,17 @@ addToCollection("Brave Faces Everyone", "Spanish Love Songs", "2020");
 addToCollection("RTJ4", "Run The Jewels", "2020");
 addToCollection("I Don\'t Live Here Anymore", "The War On Drugs", "2021");
 console.log(collection);
+
+
+function showCollection(array){
+  title = album.title;
+  artist = album.artist;
+  yearPublished = album.yearPublished;
+  let total = array.length;
+  console.log(total);
+  for (i = 0; i < array.length; i++) {
+    console.log(array[i].title + " by " + array[i].artist + " published in " + array[i].yearPublished)
+  }
+};
+
+showCollection(collection);
