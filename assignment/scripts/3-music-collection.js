@@ -24,6 +24,12 @@ addToCollection("I Don\'t Live Here Anymore", "The War On Drugs", "2021");
 console.log(collection[5]);
 console.log(collection);
 
+//Checking a couple different object logs
+
+// console.log(collection[3].artist);
+// console.log(collection[4].yearPublished);
+
+
 function showCollection(array){
   console.log(array.length);
   for (i = 0; i < array.length; i++){
@@ -38,8 +44,8 @@ function findByArtist(artist) {
   artist = collection.artist;
   results = [];
   for (i = 0; i < collection.length; i++)
-    if (collection[i].artist === artist){
-      results.push();
+    if (collection[i].values === artist){
+      results.push(collection[i]);
       return results;
     } else {
       return [];
