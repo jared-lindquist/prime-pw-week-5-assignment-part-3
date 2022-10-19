@@ -38,13 +38,14 @@ function showCollection(array){
 }
 showCollection(collection);
 
+//console.log(collection[2].artist);
+
 let results = [];
 
-function findByArtist(artist) {
-  artist = collection.artist;
+function findByArtist(collection, artist) {
   results = [];
   for (i = 0; i < collection.length; i++)
-    if (collection[i].values === artist){
+    if (collection[i].artist === artist){
       results.push(collection[i]);
       return results;
     } else {
