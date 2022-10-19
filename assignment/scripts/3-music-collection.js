@@ -1,10 +1,14 @@
 console.log('***** Music Collection *****')
 let collection = [];
-
+let album = {};
 
 function addToCollection(title, artist, yearPublished){
- return collection.push({title, artist, yearPublished})
+  let album = {title, artist, yearPublished}
+  collection.push(album)
+  return album;
 }
+
+
 
 addToCollection("In Rainbows", "Radiohead", "2007");
 addToCollection("Go Farther In Lightness", "Gang of Youths", "2017");
