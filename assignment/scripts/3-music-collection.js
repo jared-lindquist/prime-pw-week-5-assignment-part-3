@@ -48,10 +48,12 @@ function findByArtist(artist) {
     if (collection[i].artist === artist){
       results.push(collection[i]);
     } 
-  }   return results;
+  }   
+  return results;
 }
 findByArtist("Queen");
 findByArtist( "The Killers");
 
 console.log(findByArtist("The Killers"));
 console.log(findByArtist("Queen"));
+console.log(findByArtist("The War On Drugs"));
