@@ -1,10 +1,12 @@
 console.log('***** Music Collection *****')
+
 let collection = [];
-//let album = {};
+let album = {};
+
 
 function addToCollection(title, artist, yearPublished){
-  album = {title, artist, yearPublished}
-  collection.push(album)
+  album = {title, artist, yearPublished};
+  collection.push(album);
   return album;
 }
 
@@ -18,7 +20,7 @@ addToCollection("Hot Fuss", "The Killers", "2004");
 console.log(collection[2]);
 addToCollection("Brave Faces Everyone", "Spanish Love Songs", "2020");
 console.log(collection[3]);
-addToCollection("RTJ4", "Run The Jewels", "2020");
+addToCollection("Lost In The Dream", "The War On Drugs", "2014");
 console.log(collection[4]);
 addToCollection("I Don\'t Live Here Anymore", "The War On Drugs", "2021");
 console.log(collection[5]);
@@ -30,6 +32,7 @@ console.log(collection);
 // console.log(collection[4].yearPublished);
 
 
+
 function showCollection(array){
   console.log(array.length);
   for (i = 0; i < array.length; i++){
@@ -38,23 +41,20 @@ function showCollection(array){
 }
 showCollection(collection);
 
-// console.log(collection[2].artist);
+
 
 
 
 function findByArtist(artist) {
-  results = [];
-  for (i = 0; i < collection.length; i++)
-    if (collection[i].artist === artist){
-      results.push(collection[i].artist);
-      // return results;
-    } else {
-      return [];
-    }
+  const results = [];
+  for (i =0; i < collection.length; i++){
+  if (collection[i].artist === artist){
+    results.push(collection[i]);
+  } 
+} return results;
 }
-
 findByArtist("Queen");
 findByArtist( "The Killers");
-console.log(results);
 
-console.log(collection[i].artist);
+console.log(findByArtist("The Killers"));
+console.log(findByArtist("Queen"));
