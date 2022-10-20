@@ -38,20 +38,22 @@ function showCollection(array){
 }
 showCollection(collection);
 
-//console.log(collection[2].artist);
+// console.log(collection[2].artist);
 
-let results = [];
 
-function findByArtist(collection, artist) {
+
+function findByArtist(artist) {
   results = [];
   for (i = 0; i < collection.length; i++)
-    if (collection[i].artist === artist){
-      results.push(collection[i]);
+    if (collection[i].artist = artist){
+      results.push(collection[i].artist);
       return results;
     } else {
       return [];
     }
 }
+
 findByArtist("Queen");
-findByArtist("The Killers");
+findByArtist( "The Killers");
 console.log(results);
+
