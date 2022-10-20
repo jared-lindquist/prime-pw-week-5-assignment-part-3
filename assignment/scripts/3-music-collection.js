@@ -42,16 +42,13 @@ function showCollection(array){
 showCollection(collection);
 
 
-
-
-
 function findByArtist(artist) {
   const results = [];
   for (i =0; i < collection.length; i++){
-  if (collection[i].artist === artist){
-    results.push(collection[i]);
-  } 
-} return results;
+    if (collection[i].artist === artist){
+      results.push(collection[i]);
+    } 
+  }   return results;
 }
 findByArtist("Queen");
 findByArtist( "The Killers");
