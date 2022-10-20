@@ -45,9 +45,9 @@ showCollection(collection);
 function findByArtist(artist) {
   results = [];
   for (i = 0; i < collection.length; i++)
-    if (collection[i].artist = artist){
+    if (collection[i].artist === artist){
       results.push(collection[i].artist);
-      return results;
+      // return results;
     } else {
       return [];
     }
@@ -57,3 +57,4 @@ findByArtist("Queen");
 findByArtist( "The Killers");
 console.log(results);
 
+console.log(collection[i].artist);
