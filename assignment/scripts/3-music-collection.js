@@ -1,16 +1,22 @@
 console.log('***** Music Collection *****')
 
 let collection = [];
-let album = {};
 
+// addToCollection function
 
 function addToCollection(title, artist, yearPublished){
-  album = {title, artist, yearPublished};
+  album = {
+    title: title, 
+    artist: artist, 
+    yearPublished: yearPublished
+  };
   collection.push(album);
   return album;
 }
 
 
+//Adding albums to collection using addToCollection function
+//logging each entry
 
 addToCollection("In Rainbows", "Radiohead", "2007");
 console.log(collection[0]);
@@ -26,12 +32,13 @@ addToCollection("I Don\'t Live Here Anymore", "The War On Drugs", "2021");
 console.log(collection[5]);
 console.log(collection);
 
-//Checking a couple different object logs
+//Checking a couple different object keys
 
-// console.log(collection[3].artist);
-// console.log(collection[4].yearPublished);
+ console.log(collection[3].artist);
+ console.log(collection[4].yearPublished);
 
 
+//Show collection function
 
 function showCollection(array){
   console.log(array.length);
@@ -39,20 +46,23 @@ function showCollection(array){
     console.log(array[i].title + " by " + array[i].artist + " published in " + array[i].yearPublished);
   }
 }
+//Testing showCollection function
+
 showCollection(collection);
 
+//Find by artist function:
 
-function findByArtist(artist) {
+function findByArtist(param1) {
   const results = [];
   for (i =0; i < collection.length; i++){
-    if (collection[i].artist === artist){
+    if (collection[i].artist === param1){
       results.push(collection[i]);
     } 
   }   
   return results;
 }
-findByArtist("Queen");
-findByArtist( "The Killers");
+
+//Testing findByArtist function
 
 console.log(findByArtist("The Killers"));
 console.log(findByArtist("Queen"));
